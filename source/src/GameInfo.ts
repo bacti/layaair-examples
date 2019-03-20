@@ -1,9 +1,10 @@
-/**
- * 游戏UI类
- */
-class GameInfo extends ui.GameInfoUI {
-    constructor() {
+import { GameInfoUI } from './ui/layaUI.max.all'
+
+export class GameInfo extends GameInfoUI {
+    private gameInstance
+    constructor(gameInstance) {
         super();
+        this.gameInstance = gameInstance
         //注册按钮点击事件，点击后暂停游戏
         this.pauseBtn.on("click", this, this.onPauseBtnClick);
         //初始化UI显示
@@ -22,13 +23,13 @@ class GameInfo extends ui.GameInfoUI {
         e.stopPropagation();
         //暂停游戏
         this.infoLabel.text = "游戏已暂停，任意地方恢复游戏";
-        gameInstance.pause();
+        this.gameInstance.pause();
         Laya.stage.once("click", this, this.onStageClick)
     }
 
     onStageClick(e: Laya.Event): void {
         this.infoLabel.text = "";
-        gameInstance.resume();
+        this.gameInstance.resume();
     }
 
     //显示血量

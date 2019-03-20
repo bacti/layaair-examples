@@ -1,7 +1,7 @@
 /**
  * 角色类
  */
-class Role extends Laya.Sprite {
+export class Role extends Laya.Sprite {
     //是否缓存了动画
     private static cached: boolean = false;
     //定义飞机的身体

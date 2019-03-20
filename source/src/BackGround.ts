@@ -1,7 +1,7 @@
 /**
  * 循环滚动的游戏背景
  */
-class BackGround extends Laya.Sprite {
+export class BackGround extends Laya.Sprite {
     //定义背景1
     private bg1: Laya.Sprite;
     //定义背景2

@@ -1,3 +1,9 @@
+import '../../libs/laya.core.js'
+import '../../libs/laya.webgl.js'
+import '../../libs/laya.ui.js'
+import { BackGround } from './BackGround'
+import { GameInfo } from './GameInfo'
+import { Role } from './Role'
 /**
 * Game
 */
@@ -51,7 +57,7 @@ export class Game
         Laya.stage.addChild(this.roleBox);
 
         //创建游戏信息UI
-        this.gameInfo = new GameInfo();
+        this.gameInfo = new GameInfo(this);
         //添加到舞台上
         Laya.stage.addChild(this.gameInfo);
 
