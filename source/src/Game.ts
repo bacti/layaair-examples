@@ -1,7 +1,8 @@
 /**
 * Game
 */
-class Game {
+export class Game
+{
     //定义英雄（主战斗机）
     private hero: Role
     //子弹发射偏移位置表
@@ -316,4 +317,4 @@ class Game {
 }
 
 //启动游戏
-var gameInstance: Game = new Game();
+// 
